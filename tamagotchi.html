@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тамагочи</title>
+    <link rel="stylesheet" href="css/tamagotchi.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header-controls">
+            <button class="back-btn" onclick="goBack()">← Назад на главную</button>
+            <button class="reset-btn" onclick="resetGame()">🔄 Новая игра</button>
+        </div>
+        
+        <h1>Славик</h1>
+        
+        <div class="save-info" id="saveInfo"></div>
+        
+        <div class="age-stage" id="ageStage">Малыш</div>
+        
+        <div class="pet-container">
+            <img id="pet" class="pet" src="images/tamagotchi/baby.png" alt="Ваш питомец">
+        </div>
+        
+        <div class="message" id="message">Добро пожаловать! Позаботьтесь о своем питомце!</div>
+        
+        <div class="stats">
+            <div class="stat">
+                Голод: <span id="hunger">5</span>/10
+                <div class="stat-bar">
+                    <div id="hungerBar" class="stat-fill hunger-fill" style="width: 50%;"></div>
+                </div>
+            </div>
+            <div class="stat">
+                Сонливость: <span id="sleepiness">5</span>/10
+                <div class="stat-bar">
+                    <div id="sleepinessBar" class="stat-fill sleepiness-fill" style="width: 50%;"></div>
+                </div>
+            </div>
+            <div class="stat">
+                Скука: <span id="boredom">5</span>/10
+                <div class="stat-bar">
+                    <div id="boredomBar" class="stat-fill boredom-fill" style="width: 50%;"></div>
+                </div>
+            </div>
+            <div class="stat">
+                Пури пури пури: <span id="age">0</span> дня
+                <div class="stat-bar">
+                    <div id="ageBar" class="stat-fill age-fill" style="width: 0%;"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="control-btn feed" onclick="tamagotchi.feed()">🍎 Покормить</button>
+            <button class="control-btn sleep" onclick="tamagotchi.putToSleep()">💤 Уложить спать</button>
+            <button class="control-btn play" onclick="tamagotchi.play()">🎮 Поиграть</button>
+            <!-- <button class="control-btn clean" onclick="tamagotchi.clean()">✨ Почистить</button> -->
+        </div>
+
+        <div class="info-panel">
+            <p>💾 Игра автоматически сохраняется. Вы можете закрыть страницу и вернуться позже!</p>
+        </div>
+    </div>
+
+    <script src="js/tamagotchi.js"></script>
+</body>
+</html>
